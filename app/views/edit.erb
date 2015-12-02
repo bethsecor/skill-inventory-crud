@@ -1,0 +1,26 @@
+<!-- <h4>Add a skill</h4>
+
+<form action="/skills/<%= @skill.id %>" method="post">
+  <input type="hidden" name="_method" value="put">
+  <input type='text' name='skill[title]' value='<%= @skill.title %>' >
+  <textarea name='skill[description]'><%= @skill.description %></textarea>
+  <input type="submit"/>
+</form> -->
+
+<div class="row">
+  <div class="col s3"><p></p></div>
+    <form action="/skills/<%= @skill.id %>" method="post" class="col s6">
+      <input type="hidden" name="_method" value="put">
+      <h4 class="center-align orange-text">Edit your skill:</h4><br/>
+      <div class="input-field">
+        <input type='text' name='skill[title]' value='<%= @skill.title %>' id="skill_title"/>
+        <label for="skill_title">Title:</label>
+      </div>
+      <div class="input-field">
+        <textarea name='skill[description]' id="textarea1" class="materialize-textarea"><%= @skill.description %></textarea>
+        <label for="textarea1">Description:</label>
+      </div>
+      <input type='submit' class="waves-effect waves-light btn orange"/>
+    </form>
+  </div>
+</div>

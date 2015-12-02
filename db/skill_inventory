@@ -1,0 +1,22 @@
+---
+skills:
+- id: 2
+  title: Programming
+  description: Ruby Warriors!
+- id: 3
+  title: Singing
+  description: Yeah not really. JUST KIDDING FOLKS. But I can't help it when Sara
+    Bareilles comes on!
+- id: 4
+  title: Painting
+  description: artofmoxie.com
+- id: 6
+  title: Fixing broken code
+  description: SOMETIMES. SOMETIMES!!!!!
+- id: 7
+  title: Not getting enough sleep
+  description: INSOMNIA. Sleep eludes me.
+- id: 8
+  title: Resiliency
+  description: Damn straight.
+total: 8

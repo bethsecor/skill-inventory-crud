@@ -1,0 +1,11 @@
+<div class="row">
+  <div class="col s3"><p></p></div>
+  <div class="col s6">
+    <h4 class="center-align orange-text">My Skills</h4>
+    <div class="collection">
+    <% @skills.each do |skill| %>
+    <h5><a href="/skills/<%= skill.id %>" class="collection-item purple-text"><%= skill.id %>. <%= skill.title %></a></h5>
+    <% end %>
+    </div>
+  </div>
+</div>

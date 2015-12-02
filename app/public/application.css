@@ -1,0 +1,37 @@
+body {
+  background-image: url(/images/giftly.png);
+}
+
+label {
+  font-size: 1.2em !important;
+}
+
+h4 {
+  font-family: 'Lobster Two', cursive;
+  font-size: 3.2em !important;
+}
+
+.brand-logo {
+  font-family: 'Lobster Two', cursive;
+  font-size: 4.2em !important;
+}
+
+.collection {
+  background-color: white;
+}
+
+.container {
+  padding-top: 30px;
+}
+
+#dash-title {
+  padding-bottom: 30px;
+}
+
+#skill_title {
+  font-size: 1.2em;
+}
+
+#textarea1 {
+  font-size: 1.2em;
+}
