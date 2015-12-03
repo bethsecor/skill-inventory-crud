@@ -2,7 +2,7 @@
 skills:
 - id: 2
   title: Programming
-  description: Ruby Warriors!
+  description: Ruby Warriors FOREVER!
 - id: 3
   title: Singing
   description: Yeah not really. JUST KIDDING FOLKS. But I can't help it when Sara
@@ -14,8 +14,8 @@ skills:
   title: Fixing broken code
   description: SOMETIMES. SOMETIMES!!!!!
 - id: 7
-  title: Not getting enough sleep
-  description: INSOMNIA. Sleep eludes me.
+  title: Taking care of capybaras
+  description: Adorbs.
 - id: 8
   title: Resiliency
   description: Damn straight.
