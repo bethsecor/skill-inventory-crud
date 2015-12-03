@@ -40,8 +40,6 @@ class UserNavigatesNavbarTest < FeatureTest
     assert_equal '/', current_path
   end
 
-  ####
-
   def test_goes_to_skills_when_skillz_clicked_from_homepage
     visit('/')
     click_link('view_list')
@@ -80,8 +78,6 @@ class UserNavigatesNavbarTest < FeatureTest
 
     assert_equal '/skills', current_path
   end
-
-  ####
 
   def test_goes_to_skills_new_when_skillz_clicked_from_homepage
     visit('/')
