@@ -10,13 +10,13 @@ skills:
 - id: 4
   title: Painting
   description: artofmoxie.com
-- id: 6
-  title: Fixing broken code
-  description: SOMETIMES. SOMETIMES!!!!!
 - id: 7
   title: Taking care of capybaras
   description: Adorbs.
 - id: 8
   title: Resiliency
   description: Damn straight.
-total: 8
+- id: 9
+  title: Teaching statistics
+  description: p-values!
+total: 9

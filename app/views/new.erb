@@ -9,7 +9,7 @@
 
 <div class="row">
   <div class="col s3"><p></p></div>
-    <form action="/skills" method="post" class="col s6 white">
+    <form action="/skills" method="post" class="col s6 white" id="new-skill-form">
       <h4 class="center-align orange-text">Add a skill:</h4><br/>
       <div class="input-field">
         <input type='text' name='skill[title]' id="skill_title"/>
@@ -19,7 +19,7 @@
         <textarea name='skill[description]' id="textarea1" class="materialize-textarea"></textarea>
         <label for="textarea1">Description:</label>
       </div>
-      <input type='submit' class="waves-effect waves-light btn orange"/>
+      <input type='submit' value="Submit" class="waves-effect waves-light btn orange"/>
     </form>
   </div>
 </div>

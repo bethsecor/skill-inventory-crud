@@ -1,0 +1,126 @@
+require_relative '../test_helper'
+
+class UserNavigatesNavbarTest < FeatureTest
+  def test_goes_to_homepage_when_skillz_clicked_from_homepage
+    visit('/')
+    click_link('Skillz')
+
+    assert_equal '/', current_path
+  end
+
+  def test_goes_to_homepage_when_skillz_clicked_from_skills
+    visit('/skills')
+    click_link('Skillz')
+
+    assert_equal '/', current_path
+  end
+
+  def test_goes_to_homepage_when_skillz_clicked_from_skills_new
+    visit('/skills/new')
+    click_link('Skillz')
+
+    assert_equal '/', current_path
+  end
+
+  def test_goes_to_homepage_when_skillz_clicked_from_a_skill_showpage
+    SkillInventory.create({ :title       => "Petting a capybara",
+                            :description => "They are cute!"})
+    visit('/skills/1')
+    click_link('Skillz')
+
+    assert_equal '/', current_path
+  end
+
+  def test_goes_to_homepage_when_skillz_clicked_from_a_skill_edit
+    SkillInventory.create({ :title       => "Petting a capybara",
+                            :description => "They are cute!"})
+    visit('/skills/1/edit')
+    click_link('Skillz')
+
+    assert_equal '/', current_path
+  end
+
+  ####
+
+  def test_goes_to_skills_when_skillz_clicked_from_homepage
+    visit('/')
+    click_link('view_list')
+
+    assert_equal '/skills', current_path
+  end
+
+  def test_goes_to_skills_when_skillz_clicked_from_skills
+    visit('/skills')
+    click_link('view_list')
+
+    assert_equal '/skills', current_path
+  end
+
+  def test_goes_to_skills_when_skillz_clicked_from_skills_new
+    visit('/skills/new')
+    click_link('view_list')
+
+    assert_equal '/skills', current_path
+  end
+
+  def test_goes_to_skills_when_skillz_clicked_from_a_skill_showpage
+    SkillInventory.create({ :title       => "Petting a capybara",
+                            :description => "They are cute!"})
+    visit('/skills/1')
+    click_link('view_list')
+
+    assert_equal '/skills', current_path
+  end
+
+  def test_goes_to_skills_when_skillz_clicked_from_a_skill_edit
+    SkillInventory.create({ :title       => "Petting a capybara",
+                            :description => "They are cute!"})
+    visit('/skills/1/edit')
+    click_link('view_list')
+
+    assert_equal '/skills', current_path
+  end
+
+  ####
+
+  def test_goes_to_skills_new_when_skillz_clicked_from_homepage
+    visit('/')
+    click_link('add')
+
+    assert_equal '/skills/new', current_path
+  end
+
+  def test_goes_to_skills_new_when_skillz_clicked_from_skills
+    visit('/skills')
+    click_link('add')
+
+    assert_equal '/skills/new', current_path
+  end
+
+  def test_goes_to_skills_new_when_skillz_clicked_from_skills_new
+    visit('/skills/new')
+    click_link('add')
+
+    assert_equal '/skills/new', current_path
+  end
+
+  def test_goes_to_skills_new_when_skillz_clicked_from_a_skill_showpage
+    SkillInventory.create({ :title       => "Petting a capybara",
+                            :description => "They are cute!"})
+    visit('/skills/1')
+    click_link('add')
+
+    assert_equal '/skills/new', current_path
+  end
+
+  def test_goes_to_skills_new_when_skillz_clicked_from_a_skill_edit
+    SkillInventory.create({ :title       => "Petting a capybara",
+                            :description => "They are cute!"})
+    visit('/skills/1/edit')
+    click_link('add')
+    save_and_open_page
+
+    assert_equal '/skills/new', current_path
+  end
+
+end
