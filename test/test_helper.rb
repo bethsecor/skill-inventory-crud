@@ -5,11 +5,17 @@ require 'minitest/autorun'
 require 'minitest/pride'
 require 'capybara'
 
+DatabaseCleaner[:sequel, {:connection => Sequel.sqlite("db/skill_inventory_test.sqlite3")}].strategy = :truncation
+
 Capybara.app = SkillInventoryApp
 
 class Minitest::Test
+  def setup
+    DatabaseCleaner.start
+  end
+
   def teardown
-    SkillInventory.delete_all
+    DatabaseCleaner.clean
   end
 end
 

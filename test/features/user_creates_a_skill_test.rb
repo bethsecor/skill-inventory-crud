@@ -12,7 +12,8 @@ class UserCreatesASkillTest < FeatureTest
 
     assert_equal '/skills', current_path
 
-    visit('/skills/1')
+    id = SkillInventory.all.last.id
+    visit("/skills/#{id}")
 
     within('.card-content') do
       assert page.has_content?("Petting a capybara")

@@ -4,8 +4,8 @@ class UserEditsASkillTest < FeatureTest
   def test_user_edits_a_skill
     SkillInventory.create({ :title       => "Petting a capybara",
                             :description => "They are cute!"})
-
-    visit('/skills/1/edit')
+    id = SkillInventory.all.last.id
+    visit("/skills/#{id}/edit")
 
     within('#edit-skill-form') do
       fill_in('skill[title]', with: "Petting a capybara")
@@ -13,7 +13,7 @@ class UserEditsASkillTest < FeatureTest
       click_button('Submit')
     end
 
-    assert_equal '/skills/1', current_path
+    assert_equal "/skills/#{id}", current_path
 
     within('.card-content') do
       assert page.has_content?("Petting a capybara")

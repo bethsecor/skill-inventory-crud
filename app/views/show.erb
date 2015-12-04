@@ -9,11 +9,14 @@
       </div>
       <div class="card-action">
         <a href="/skills/<%= @skill.id %>/edit">Edit</a>
+        <!-- <a href="#" onclick="document.delete.submit()" name="Delete">Delete</a> -->
       </div>
     </div>
-    <form action="/skills/<%= @skill.id %>" method="POST">
+    <form action="/skills/<%= @skill.id %>" method="POST" name="delete">
       <input type="hidden" name="_method" value="DELETE">
       <input type="submit" value="Delete" class="right-align waves-effect waves-light btn orange"/>
     </form>
   </div>
 </div>
+
+<!-- style="display: none;" -->
