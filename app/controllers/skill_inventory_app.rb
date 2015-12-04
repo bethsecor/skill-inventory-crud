@@ -6,6 +6,10 @@ class SkillInventoryApp < Sinatra::Base
     erb :dashboard
   end
 
+  get '/capybara' do
+    erb :capybara
+  end
+
   get '/skills' do
     @skills = SkillInventory.all
     erb :index

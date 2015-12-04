@@ -1,6 +1,7 @@
 body {
-  background-image: url(/images/capybara.jpg);
+  background-image: url(/images/swirl_pattern.png);
 }
+
 
 label {
   font-size: 1.2em !important;
@@ -18,6 +19,7 @@ h4 {
 
 .collection {
   background-color: white;
+  border-radius: 10px;
 }
 
 .container {
@@ -34,4 +36,65 @@ h4 {
 
 #textarea1 {
   font-size: 1.2em;
+}
+
+#new-skill-form {
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #00bcd4;
+}
+
+#edit-skill-form {
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #00bcd4 !important;
+}
+
+ .input-field label {
+   color: white;
+ }
+
+ .input-field input[type=text]:focus + label {
+   color: orange;
+ }
+
+textarea.materialize-textarea:focus:not([readonly]) + label {
+   color: orange;
+ }
+
+ .input-field input[type=text]:focus {
+   border-bottom: 1px solid orange;
+   box-shadow: 0 1px 0 0 orange;
+ }
+
+textarea.materialize-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid orange;
+  box-shadow: 0 1px 0 0 orange;
+}
+
+.left-button {
+  float: left;
+}
+.right-button {
+  float: right;
+}
+
+#skill-list-box, #dashboard-box, #capybara-box {
+  border-radius: 10px;
+  padding : 10px;
+  background-color: #00bcd4;
+}
+
+#capybara {
+  /*height: 500px;*/
+  margin: auto;
+  width: 95%;
+}
+
+#capybara-box {
+  text-align: center;
+}
+
+#dashboard-box {
+  padding-bottom: 30px;
 }
