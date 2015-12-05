@@ -2,7 +2,7 @@
   <div class="col s3"><p></p></div>
     <form action="/skills/<%= @skill.id %>" method="post" class="col s6 white" id="edit-skill-form">
       <input type="hidden" name="_method" value="put">
-      <h4 class="center-align orange-text">Edit your skill:</h4><br/>
+      <h4 class="center-align amber-text">Edit your skill:</h4><br/>
       <div class="input-field">
         <input type='text' name='skill[title]' value='<%= @skill.title %>' id="skill_title"/>
         <label for="skill_title">Title:</label>
@@ -11,7 +11,7 @@
         <textarea name='skill[description]' id="textarea1" class="materialize-textarea"><%= @skill.description %></textarea>
         <label for="textarea1">Description:</label>
       </div>
-      <input type='submit' value="Submit" class="waves-effect waves-light btn orange"/>
+      <input type='submit' value="Submit" class="waves-effect waves-light btn amber purple-text"/>
       <p></p>
     </form>
   </div>

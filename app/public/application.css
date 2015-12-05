@@ -54,13 +54,13 @@ h4 {
 #new-skill-form, #email-skills-form {
   border-radius: 10px;
   padding: 10px;
-  background-color: #00bcd4;
+  background-color: #00acc1;
 }
 
 #edit-skill-form {
   border-radius: 10px;
   padding: 10px;
-  background-color: #00bcd4 !important;
+  background-color: #00acc1 !important;
 }
 
  .input-field label {
@@ -68,21 +68,21 @@ h4 {
  }
 
  .input-field input[type=text]:focus + label {
-   color: orange;
+   color: #ffc107;
  }
 
 textarea.materialize-textarea:focus:not([readonly]) + label {
-   color: orange;
+   color: #ffc107;
  }
 
  .input-field input[type=text]:focus {
-   border-bottom: 1px solid orange;
-   box-shadow: 0 1px 0 0 orange;
+   border-bottom: 1px solid #ffc107;
+   box-shadow: 0 1px 0 0 #ffc107;
  }
 
 textarea.materialize-textarea:focus:not([readonly]) {
-  border-bottom: 1px solid orange;
-  box-shadow: 0 1px 0 0 orange;
+  border-bottom: 1px solid #ffc107;
+  box-shadow: 0 1px 0 0 #ffc107;
 }
 
 .left-button {
@@ -95,7 +95,7 @@ textarea.materialize-textarea:focus:not([readonly]) {
 #skill-list-box, #dashboard-box, #capybara-box {
   border-radius: 10px;
   padding : 10px;
-  background-color: #00bcd4;
+  background-color: #00acc1;
 }
 
 #capybara {

@@ -1,7 +1,7 @@
-<h1 style="color: #9c27b0;">Thanks for using Skillz!</h1>
-<div style="border-radius: 10px; padding: 10px; background-color: #00bcd4; width: 60%;">
-  <h3 style="color: #ff9800;"><%= @name %>, here are your skills:</h3>
+<h1 style="color: #e91e63;">Thanks for using Skillz!</h1>
+<div style="border-radius: 10px; padding: 10px; background-color: #00acc1; width: 60%;">
+  <h3 style="color: #ffc107;"><%= @name %>, here are your skills:</h3>
   <% @skills.each do |skill| %>
-  <p style="color: #ff9800;"><%= skill.id %>. <%= skill.title %></a></p>
+  <p style="color: #ffc107;"><%= skill.id %>. <%= skill.title %></a></p>
   <% end %>
 <div>

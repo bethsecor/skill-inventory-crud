@@ -2,14 +2,14 @@
   <div class="col s3"><p></p></div>
   <div class="col s6">
     <div id="skill-list-box">
-    <h4 class="center-align orange-text">My Skills</h4>
+    <h4 class="center-align amber-text">My Skills</h4>
     <div class="collection">
     <% @skills.each do |skill| %>
     <h5><a href="/skills/<%= skill.id %>" class="collection-item purple-text"><%= skill.id %>. <%= skill.title %></a></h5>
     <% end %>
     </div>
     <div class="center-align">
-      <a href="/skills/email" class="waves-effect waves-light btn orange">Email Skills</a>
+      <a href="/skills/email" class="waves-effect waves-light btn amber purple-text">Email Skills</a>
     </div>
     </div>
   </div>
