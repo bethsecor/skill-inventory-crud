@@ -2,7 +2,6 @@ body {
   background-image: url(/images/swirl_pattern.png);
 }
 
-
 label {
   font-size: 1.2em !important;
 }
@@ -11,6 +10,15 @@ h4 {
   font-family: 'Lobster Two', cursive;
   font-size: 3.2em !important;
 }
+
+/*footer {
+  padding-bottom: 15px;
+  margin: 0;
+}
+
+#footer-msg {
+  font-family: 'Lobster Two', cursive;
+}*/
 
 .brand-logo {
   font-family: 'Lobster Two', cursive;
@@ -22,9 +30,14 @@ h4 {
   border-radius: 10px;
 }
 
-.container {
+.beth-container {
+  min-height: 100vh;
   padding-top: 30px;
 }
+
+/*.container {
+
+}*/
 
 #dash-title {
   padding-bottom: 30px;
@@ -38,7 +51,7 @@ h4 {
   font-size: 1.2em;
 }
 
-#new-skill-form {
+#new-skill-form, #email-skills-form {
   border-radius: 10px;
   padding: 10px;
   background-color: #00bcd4;

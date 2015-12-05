@@ -1,6 +1,7 @@
 class SkillInventoryApp < Sinatra::Base
   set :root, File.join(File.dirname(__FILE__), '..')
   set :method_override, true
+  # set :erb, :layout => :'/layouts/layout'
 
   get '/' do
     erb :dashboard
@@ -21,6 +22,33 @@ class SkillInventoryApp < Sinatra::Base
 
   post '/skills' do
     SkillInventory.create(params[:skill])
+    redirect '/skills'
+  end
+
+  get '/skills/email' do
+    erb :email
+  end
+
+  post '/skills/email' do
+    @skills = SkillInventory.all
+    @name = params[:name]
+
+    Pony.options = ({ :via_options          => {
+                      :address              => "smtp.gmail.com",
+                      :port                 => 587,
+                      :user_name            => 'beth.skill.inventory@gmail.com',
+                      :password             => '123capybara',
+                      :authentication       => 'plain',
+                      :enable_starttls_auto => true
+                      },
+                      :via                  => :smtp })
+
+    Pony.mail( {:to      => params[:email],
+                :from    => 'beth.skill.inventory@gmail.com',
+                :subject => "Your Skill List from Skillz",
+                :headers => { 'Content-Type' => 'text/html' },
+                :body    => erb(:'/mailer/email_skills', layout: :'/mailer/email_wrapper') })
+
     redirect '/skills'
   end
 
